@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+</head>
+<body>
+    
+    Name : <br>
+    <input type="text" name="" id="name"><br>
+    <p id="err1"></p><br>
+    Email : <br>
+    <input type="email" name="" id="email"><br>
+    <p id="err2"></p><br>
+    Password : <br>
+    <input type="password" name="" id="password"><br>
+    <p id="err3"></p><br>
+    Number : <br>
+    <input type="number" name="" id="number"><br>
+    <p id="err4"></p><br>
+<button onclick="signup1()">SignUp</button>
+</body>
+
+<script>
+    function signup1(){
+    let name = document.getElementById("name").value
+    let email = document.getElementById("email").value
+    let pass = document.getElementById("password").value
+    let number = document.getElementById("number").value
+    
+    if(name == ""){
+      document.getElementById("err1").innerHTML = "please fill this input"
+    }else if(email == ""){
+        document.getElementById("err2").innerHTML = "please fill this input"
+        document.getElementById("err1").innerHTML = ""
+    }else if (pass ==""){
+        document.getElementById("err3").innerHTML = "please fill this input"
+        document.getElementById("err2").innerHTML = ""
+
+    }else if(number ==""){
+        document.getElementById("err4").innerHTML = "please fill this input"
+        document.getElementById("err3").innerHTML = ""
+    
+    }else{
+        document.getElementById("err4").innerHTML = ""
+    }
+}
+</script>
+
+
+</html>
